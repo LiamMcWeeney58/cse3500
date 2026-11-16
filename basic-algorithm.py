@@ -35,8 +35,8 @@ bob_pub_bytes = bob_public.public_bytes(
     encoding=serialization.Encoding.DER,
     format=serialization.PublicFormat.SubjectPublicKeyInfo)
 
-print(f"    Last 32 bits of Alice Public Key ({len(alice_pub_bytes)}B): ...{alice_pub_bytes.hex()[-32:]}")
-print(f"    Last 32 bits of Bob Public Key   ({len(bob_pub_bytes)}B): ...{bob_pub_bytes.hex()[-32:]}")
+print(f"    Last 128 bits of Alice Public Key ({len(alice_pub_bytes)}B): ...{alice_pub_bytes.hex()[-32:]}")
+print(f"    Last 128 bits of Bob Public Key   ({len(bob_pub_bytes)}B): ...{bob_pub_bytes.hex()[-32:]}")
 
 print("\n[Step 3] Exchanging Public Keys & Computing Shared Secrets...")
 alice_shared = alice_private.exchange(bob_public)
